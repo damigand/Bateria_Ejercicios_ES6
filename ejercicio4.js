@@ -7,6 +7,9 @@ const users = [
    { id: 4, name: 'Amanda' },
 ];
 
+const names = users.map((user) => user.name);
+console.log(names);
+
 // 4.2 Dado el siguiente array, devuelve una lista que contenga los valores
 // de la propiedad .name y cambia el nombre a 'Anacleto' en caso de que
 // empiece por 'A'.
@@ -17,6 +20,9 @@ const users2 = [
    { id: 4, name: 'Amanda' },
 ];
 
+const list = users2.map((user) => (user.name.toLowerCase().startsWith('a') ? 'Anacleto' : user.name));
+console.log(list);
+
 // 4.3 Dado el siguiente array, devuelve una lista que contenga los valores
 // de la propiedad .name y añade al valor de .name el string ' (Visitado)'
 // cuando el valor de la propiedad isVisited = true.
@@ -26,3 +32,6 @@ const cities = [
    { isVisited: true, name: 'Amsterdam' },
    { isVisited: false, name: 'Seul' },
 ];
+
+const list2 = cities.map((city) => (city.isVisited ? city.name + ' (Visited)' : city.name));
+console.log(list2);
