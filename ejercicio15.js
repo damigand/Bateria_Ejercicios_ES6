@@ -5,3 +5,17 @@
 // Sugerencia de array:
 
 const fantasticFour = ['La antorcha humana', 'Mr. Fantástico', 'La mujer invisible', 'La cosa'];
+
+function swap(array, indexOne, indexTwo) {
+   let first = array[indexOne];
+   let second = array[indexTwo];
+
+   if (first && second) {
+      array[indexOne] = second;
+      array[indexTwo] = first;
+      return array;
+   }
+}
+
+console.log(swap(fantasticFour, 1, 3));
+console.log(swap(fantasticFour, 0, 2));

@@ -3,3 +3,15 @@
 // Como hemos dicho, que la función use el parametro para simular una tirada de dado
 // y retornar el resultado. Si no se te ocurre como hacer un numero aleatorio no te
 // preocupes! Busca información sobre la función de javascript Math.random()
+function rollDice(number = 6) {
+   return Math.floor(Math.random() * number + 1);
+}
+
+console.log(rollDice(10));
+console.log(rollDice(20));
+console.log(rollDice(30));
+console.log(rollDice(40));
+console.log(rollDice(50));
+console.log(rollDice(60));
+console.log(rollDice(70));
+console.log(rollDice(80));

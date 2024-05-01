@@ -9,3 +9,23 @@
 
 // De nuevo haz varios ejemplos para practicar y comprueba que funcionan
 // correctamente.
+
+//Función del ejercicio anterior.
+function findArrayIndex(array, text) {
+   for (const a of array) {
+      if (a === text) {
+         return array.indexOf(a);
+      }
+   }
+}
+
+function removeItem(array, text) {
+   array.splice(findArrayIndex(array, text), 1);
+   return array;
+}
+
+const mainCharacters = ['Luke', 'Leia', 'Han Solo', 'Chewbacca', 'Rey', 'Anakin', 'Obi-Wan'];
+
+console.log(removeItem(mainCharacters, 'Luke'));
+console.log(removeItem(mainCharacters, 'Han Solo'));
+console.log(removeItem(mainCharacters, 'Anakin'));

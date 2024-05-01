@@ -35,3 +35,17 @@ const users = [
       },
    },
 ];
+
+let suma = 0;
+let contador = 0;
+
+for (const user of users) {
+   const sounds = user.favoritesSounds;
+   for (const key in sounds) {
+      suma += sounds[key].volume;
+      contador++;
+   }
+}
+
+const media = suma / contador;
+console.log(media);

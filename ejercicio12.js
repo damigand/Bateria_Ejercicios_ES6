@@ -3,7 +3,23 @@
 // Haz varios ejemplos y compruebalos.
 
 // Sugerencia de función:
-function findArrayIndex(array, text) {}
+function findArrayIndex(array, text) {
+   for (const a of array) {
+      if (a === text) {
+         return array.indexOf(a);
+      }
+   }
+}
 
 //Ej array:
 const mainCharacters = ['Luke', 'Leia', 'Han Solo', 'Chewbacca', 'Rey', 'Anakin', 'Obi-Wan'];
+
+console.log(`index: ${findArrayIndex(mainCharacters, 'Leia')}`);
+console.log(`index: ${findArrayIndex(mainCharacters, 'Rey')}`);
+console.log(`index: ${findArrayIndex(mainCharacters, 'Chewbacca')}`);
+
+const saludos = ['Hola', 'Buenas tardes', 'Buenos días', 'Hola buenas'];
+
+console.log(`index: ${findArrayIndex(saludos, 'Buenos días')}`);
+console.log(`index: ${findArrayIndex(saludos, 'Hola buenas')}`);
+console.log(`index: ${findArrayIndex(saludos, 'Hola')}`);

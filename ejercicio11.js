@@ -45,3 +45,18 @@ const users = [
       },
    },
 ];
+
+let list = [];
+for (const user of users) {
+   const sounds = user.favoritesSounds;
+   for (const key in sounds) {
+      let sound = list.find((e) => e.name == key);
+      if (sound) {
+         sound.counter++;
+      } else {
+         list.push({ name: key, counter: 1 });
+      }
+   }
+}
+
+console.log(list);
