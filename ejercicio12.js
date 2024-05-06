@@ -4,11 +4,7 @@
 
 // Sugerencia de función:
 function findArrayIndex(array, text) {
-   for (const a of array) {
-      if (a === text) {
-         return array.indexOf(a);
-      }
-   }
+   return array.indexOf(text);
 }
 
 //Ej array:
